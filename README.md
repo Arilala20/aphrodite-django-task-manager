@@ -1,89 +1,110 @@
-# Aphrodite Task Manager — Django Web Application
+# TaskFlow — Django Task Manager
 
-A beginner-friendly Django task tracking app for HAMK Assignment 15, created for Group Aphrodite.
+**Assignment 15 | Group Aphrodite**
+
+TaskFlow is a web-based task management application developed using Python and Django. It helps users organize tasks, set priorities and due dates, and track task completion.
+
+## Group Members
+
+- Ariba Mayeesha
+- Ifty Fardin
+- Mahtab Iram
+- Nizam Sabiha
 
 ## Features
-- Add, edit, complete, and delete tasks
-- Task priority and status
-- Due dates and descriptions
-- Search/filter tasks
-- Django admin interface for managing tasks
-- Responsive HTML/CSS interface
 
-## Requirements
-- Python 3.10+
-- pip
+- Create new tasks
+- View the task list and task details
+- Edit existing tasks
+- Delete tasks
+- Mark tasks as completed
+- Set task priorities and due dates
+- Search and filter tasks
+- View task statistics on the dashboard
+- Manage task records through Django Admin
 
-## Setup on Windows (PowerShell)
+## Technologies Used
 
-1. Extract the project ZIP and open the extracted folder in VS Code.
-2. Open Terminal in that folder.
-3. Create a virtual environment:
+- **Python** — application logic
+- **Django** — web framework and backend
+- **HTML and CSS** — user interface
+- **SQLite** — database
+- **GitHub** — version control and project hosting
 
-   ```powershell
-   py -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   ```
-
-4. Install dependencies:
-
-   ```powershell
-   pip install -r requirements.txt
-   ```
-
-5. Create the database tables:
-
-   ```powershell
-   python manage.py migrate
-   ```
-
-6. Create an admin account:
-
-   ```powershell
-   python manage.py createsuperuser
-   ```
-
-   Enter a username, email (optional), and password. Keep these private.
-
-7. Start the website:
-
-   ```powershell
-   python manage.py runserver
-   ```
-
-8. Open http://127.0.0.1:8000/ in your browser.
-9. Open http://127.0.0.1:8000/admin/ to test the Django admin interface.
-
-## Project structure
+## Project Structure
 
 ```text
-aphrodite_django_task_manager/
+aphrodite-django-task-manager/
 ├── manage.py
 ├── requirements.txt
+├── README.md
+├── .gitignore
 ├── mysite/
-│   ├── __init__.py
 │   ├── settings.py
 │   ├── urls.py
-│   ├── asgi.py
-│   └── wsgi.py
+│   └── ...
 └── taskmanager/
-    ├── migrations/
-    │   └── __init__.py
-    ├── templates/taskmanager/
-    │   ├── base.html
-    │   ├── task_list.html
-    │   └── task_form.html
-    ├── __init__.py
-    ├── admin.py
-    ├── apps.py
-    ├── forms.py
     ├── models.py
+    ├── views.py
+    ├── forms.py
+    ├── admin.py
     ├── urls.py
-    └── views.py
+    ├── migrations/
+    └── templates/
 ```
 
-## AI assistance
-ChatGPT assisted with drafting the Django project structure, model, admin configuration, form, views, templates, and setup instructions. Review and test the code before submitting.
+## Installation and Setup
 
-## Assignment reflection
-AI made it faster to scaffold the model, admin interface, views, and templates. The main learning steps were installing Django, running migrations, creating a superuser, and testing the app in the browser and admin panel.
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Arilala20/aphrodite-django-task-manager.git
+cd aphrodite-django-task-manager
+```
+
+### 2. Install dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 3. Apply database migrations
+
+```bash
+python manage.py migrate
+```
+
+### 4. Create an administrator account (optional)
+
+```bash
+python manage.py createsuperuser
+```
+
+Follow the prompts to create your username and password.
+
+### 5. Start the development server
+
+```bash
+python manage.py runserver
+```
+
+Open the application at:
+
+http://127.0.0.1:8000/
+
+Django Admin is available at:
+
+http://127.0.0.1:8000/admin/
+
+## Testing
+
+The application was tested locally. The main features tested include:
+
+- Creating tasks
+- Editing task details
+- Marking tasks as completed
+- Deleting tasks
+- Viewing and managing tasks through Django Admin
+
+## Screenshots
+
